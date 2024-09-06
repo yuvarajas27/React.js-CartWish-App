@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import config from "../../config.json"
 import "./CartPage.css"
 //import user from "../../assets/user.webp"
 import remove from "../../assets/remove.png" 
@@ -66,7 +67,7 @@ const CartPage = () => {
             <div className="align_center user_info">
                 {/* using the user variable we got from context api process */}
                 {/* passing current user profile in template literal with full server address to show image dynamically using curly brackets, */}
-                <img src={`http://localhost:5000/profile/${user?.profilePic}`} alt="user_profile"/>
+                <img src={`${config.backendURL}/profile/${user?.profilePic}`} alt="user_profile"/>
                 <div>
                     {/* using the user variable we got from context api process */}
                     {/* passing current user name dynamically using curly brackets */}
