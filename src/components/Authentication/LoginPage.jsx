@@ -229,7 +229,7 @@ const LoginPage = () => {
             // when user submits the form once enter login credentials, onSubmit function this try block runs, if there is a state property(that means user try to access protected routes without login,so Navigating to loginpage along with passing state prop as protected route user access without login(by using useLocation()) in Navigate component in ProtectedRoute.jsx component, then we will redirect to the protected route user access without login(using window.location, so full page load refresh occurs).
 
             // else if there is no state property, it means this login page will be loaded when user is logged in and user try to access /login route page, so home page will be reloaded(using window.location)
-            window.location=state? state.form:"/"          
+            window.location=state? state.from:"/"          
         }
         // this error parameter in catch block contains information about the error that was thrown.  
         catch (err) {
